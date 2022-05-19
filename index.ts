@@ -6,6 +6,7 @@ function getSumDifferenceMultiplyNums(a: number, b: number): {} {
     diff: a - b,
     mult: a * b,
   };
+
   return res;
 }
 getSumDifferenceMultiplyNums(5, 3);
@@ -22,6 +23,7 @@ getRealNumbersXY(3, 4);
 function getCubeVolumeAndArea(finLength: number) {
   let volume = Math.pow(finLength, 3);
   let area = 4 * Math.pow(finLength, 2);
+
   return {
     volume,
     area,
@@ -32,3 +34,13 @@ getCubeVolumeAndArea(6);
 // 4. Даны два действительных положительных числа.
 // Найти среднее арифметическое и среднее геометрическое
 // этих чисел.
+function getAvarageArithmeticGeometrick(realA: number, realB: number) {
+  let avarageArithmetic = (realA + realB) / arguments.length;
+  let avarageGeometrick = Math.round(Math.sqrt(realA * realB));
+
+  return {
+    avarageArithmetic,
+    avarageGeometrick,
+  };
+}
+getAvarageArithmeticGeometrick(21, 6);
