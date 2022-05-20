@@ -66,12 +66,40 @@ function getAvarageArithmeticGeometrickTheirModule(
   };
 }
 getAvarageArithmeticGeometrickTheirModule(21, 2);
- 
-// 6. Даны катеты прямоугольного треугольника. Найти
-// его гипотенузу и площадь.  c = Math.sqrt(a² + b²)
-function findTriangleHypotenuseAndArea(a: number, b: number): number {
-let hypotenuse = Math.sqrt(Math.pow(a, 2)) + Math.sqrt(Math.pow(b, 2));
-return hypotenuse;
-}
 
-console.log(findTriangleHypotenuseAndArea(3, 4));  
+// 6. Даны катеты прямоугольного треугольника. Найти
+// его гипотенузу и площадь.
+// гипотенуза c = Math.sqrt(a² + b²)
+// S-площадь S = Math.sqrt(p*(p-a)*(p-b)*p-c)
+// p-полупериметр p = a + b + c / 2
+function findTriangleHypotenuseAndSquare(a: number, b: number) {
+  let hypotenuse = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+  let p = (a + b + hypotenuse) / 2;
+  let S = Math.sqrt(p * (p - a) * (p - b) * (p - hypotenuse));
+
+  return {
+    hypotenuse,
+    square: Math.round(S),
+  };
+}
+findTriangleHypotenuseAndSquare(6, 8);
+
+// 7. Смешано v₁ литров воды температуры t₁ с v₂ литрами воды температуры t₂. Найти объем
+// и температуру образовавшейся смеси
+// volume-объем => V = V1 + V2; temprature-температура => T = (t1 * v1 + t2 * v2) / v
+
+function getWaterVolumeAndTemprature(
+  v1: number,
+  v2: number,
+  t1: number,
+  t2: number
+) {
+  let volume = v1 + v2;
+  let temprature = (t1 * v1 + t2 * v2) / 2;
+
+  return {
+    volume,
+    temprature
+  }
+}
+getWaterVolumeAndTemprature(3, 4, 16, 20);
