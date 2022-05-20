@@ -44,3 +44,34 @@ function getAvarageArithmeticGeometrick(realA: number, realB: number) {
   };
 }
 getAvarageArithmeticGeometrick(21, 6);
+
+// 5. Даны два действительных числа. Найти среднее
+// арифметическое этих чисел и среднее геометрическое их
+// модулей.
+function getAvarageArithmeticGeometrickTheirModule(
+  realA: number,
+  realB: number
+) {
+  let avarageGeometrick;
+  if (realA < 0 || realB < 0) {
+    avarageGeometrick = Math.abs(Math.round(Math.sqrt(realA * realB)));
+  }
+
+  let avarageArithmetic = (realA + realB) / arguments.length;
+  avarageGeometrick = Math.round(Math.sqrt(realA * realB));
+
+  return {
+    avarageArithmetic,
+    avarageGeometrick,
+  };
+}
+getAvarageArithmeticGeometrickTheirModule(21, 2);
+ 
+// 6. Даны катеты прямоугольного треугольника. Найти
+// его гипотенузу и площадь.  c = Math.sqrt(a² + b²)
+function findTriangleHypotenuseAndArea(a: number, b: number): number {
+let hypotenuse = Math.sqrt(Math.pow(a, 2)) + Math.sqrt(Math.pow(b, 2));
+return hypotenuse;
+}
+
+console.log(findTriangleHypotenuseAndArea(3, 4));  
