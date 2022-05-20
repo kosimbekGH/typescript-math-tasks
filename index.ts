@@ -87,7 +87,6 @@ findTriangleHypotenuseAndSquare(6, 8);
 // 7. Смешано v₁ литров воды температуры t₁ с v₂ литрами воды температуры t₂. Найти объем
 // и температуру образовавшейся смеси
 // volume-объем => V = V1 + V2; temprature-температура => T = (t1 * v1 + t2 * v2) / v
-
 function getWaterVolumeAndTemprature(
   v1: number,
   v2: number,
@@ -103,3 +102,13 @@ function getWaterVolumeAndTemprature(
   }
 }
 getWaterVolumeAndTemprature(3, 4, 16, 20);
+
+
+// 8. Определить периметр правильного n-угольника, 
+// описанного около окружности радиуса r.
+// Р = а * n
+
+function getPerimeterRightSquare(n: number, a: number) {
+let perimeter = a * n;
+
+}
