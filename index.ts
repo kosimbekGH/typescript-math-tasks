@@ -107,8 +107,39 @@ getWaterVolumeAndTemprature(3, 4, 16, 20);
 // 8. Определить периметр правильного n-угольника, 
 // описанного около окружности радиуса r.
 // Р = а * n
-
-function getPerimeterRightSquare(n: number, a: number) {
+// S = n * Math.sqrt(n * a²) / 2
+// R = S / P / 2
+function getPerimeterRightSquare(n: number, a: number): number {
 let perimeter = a * n;
+let square = (n * Math.sqrt(n * Math.pow(a, 2))) / 2;
+let radius = square / perimeter / 2;
 
+return radius
+}
+getPerimeterRightSquare(6, 4);
+
+
+// 9. Три сопротивления R¹, R², R³ соединены параллельно. Найти сопротивление соединения.
+// 1 / R = (1 / R¹) + (1 / R²)...+(1 / Rn)
+function getThreeResistance(r1, r2, r3): number {
+  let resistance = (1 / r1) + (1 / r2) + (1 / r3);
+  
+  return +resistance.toFixed(4)
+}
+getThreeResistance(200, 470, 220);
+
+// 10. Определить время падения камня на поверхность
+// земли с высоты h.
+// g = 9.81  
+// t = Math.sqrt(2*h/g)
+function getFallingStone(height: number): number {
+  let g = 9.81;
+  let t = Math.sqrt(2 * height / g);
+  return +t.toFixed(5);
+}
+getFallingStone(4.905);
+
+// 11. Даны х, y, z. Вычислить а, b, если .....
+function getCalculateAB(x, y, z) {
+let a = Math.sqrt(Math.abs(x - 1)) - 
 }
